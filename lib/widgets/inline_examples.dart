@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photo_view/photo_view.dart';
+import 'package:jl_photo_view/jl_photo_view.dart';
 import 'package:jiji_modelcard_maker/common/global.dart';
 
 class InlineExample extends StatelessWidget {
@@ -17,11 +17,11 @@ class InlineExample extends StatelessWidget {
               height: screenHeight / 6,
               width: screenWidth / 6,
               child: ClipRect(
-                child: PhotoView(
+                child: JLPhotoView(
                   imageProvider: const AssetImage("assets/1.png"),
-                  maxScale: PhotoViewComputedScale.covered * 2.0,
-                  minScale: PhotoViewComputedScale.contained * 0.8,
-                  initialScale: PhotoViewComputedScale.covered,
+                  maxScale: JLPhotoViewComputedScale.covered * 2.0,
+                  minScale: JLPhotoViewComputedScale.contained * 0.8,
+                  initialScale: JLPhotoViewComputedScale.covered,
                 ),
               ),
             )
