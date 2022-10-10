@@ -19,26 +19,43 @@ class PhotoViewMove extends StatelessWidget {
           //Image
         ),
         body: Stack(
-          alignment:Alignment.center,
-          children: [
-            Positioned(
-              left: 20.0,
-              width: 300,
-              height: 300,
-              child: ClipRect(
-                child: JLPhotoView(
-                  imageProvider: FileImage(File(imgPathList.first.toString())),
-                  //imageProvider: const AssetImage("assets/1.png"),
-                  maxScale: JLPhotoViewComputedScale.covered * 2.0,
-                  minScale: JLPhotoViewComputedScale.contained * 0.8,
-                  initialScale: JLPhotoViewComputedScale.covered,
-                  enableRotation: true,
-                  enablePanAlways: true,
+              alignment:Alignment.center,
+              children:[
+                Positioned(
+                    left: 20.0,
+                    width: 300,
+                    height: 300,
+                    child: ClipRect(
+                      child: JLPhotoView(
+                        imageProvider: FileImage(File(imgPathList.first.toString())),
+                        //imageProvider: const AssetImage("assets/1.png"),
+                        maxScale: JLPhotoViewComputedScale.covered * 2.0,
+                        minScale: JLPhotoViewComputedScale.contained * 0.8,
+                        initialScale: JLPhotoViewComputedScale.covered,
+                        enableRotation: true,
+                        enablePanAlways: true,
+                      ),
+                    ),
+                  ),
+                Positioned(
+                    left: 350.0,
+                    width: 300,
+                    height: 300,
+                    child: ClipRect(
+                      child: JLPhotoView(
+                        imageProvider: FileImage(File(imgPathList.first.toString())),
+                        //imageProvider: const AssetImage("assets/1.png"),
+                        maxScale: JLPhotoViewComputedScale.covered * 2.0,
+                        minScale: JLPhotoViewComputedScale.contained * 0.8,
+                        initialScale: JLPhotoViewComputedScale.covered,
+                        enableRotation: true,
+                        enablePanAlways: true,
+                      ),
+                    ),
+                  ),
+              ],
+        ),
 
-                ),
-              ),
-            ),
-          ]
         // )
         // body: PhotoView.customChild(
         //       childSize: Size.square(150.0),
@@ -54,8 +71,7 @@ class PhotoViewMove extends StatelessWidget {
         //
         //       ),
         // )
-      )
-    );
+      );
   }
 }
 
