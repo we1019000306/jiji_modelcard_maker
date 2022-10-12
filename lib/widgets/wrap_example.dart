@@ -18,14 +18,14 @@ class _WrapExampleState extends State<WrapExample> {
     super.initState();
     _tiles = <Widget>[
       containerWithPictureNum('1'),
-      containerWithPictureNum('2'),
-      containerWithPictureNum('3'),
-      containerWithPictureNum('4'),
-      containerWithPictureNum('1'),
-      containerWithPictureNum('2'),
-      containerWithPictureNum('3'),
-      containerWithPictureNum('4'),
-      containerWithPictureNum('1'),
+      // containerWithPictureNum('2'),
+      // containerWithPictureNum('3'),
+      // containerWithPictureNum('4'),
+      // containerWithPictureNum('1'),
+      // containerWithPictureNum('2'),
+      // containerWithPictureNum('3'),
+      // containerWithPictureNum('4'),
+      // containerWithPictureNum('1'),
 
     ];
   }
@@ -44,7 +44,7 @@ class _WrapExampleState extends State<WrapExample> {
       runSpacing: 0.0,
       padding: const EdgeInsets.all(10),
       maxMainAxisCount: 3,
-      minMainAxisCount: 1,
+      minMainAxisCount: 3,
       children: _tiles,
       onReorder: _onReorder,
       onNoReorder: (int index) {
@@ -112,6 +112,8 @@ class _WrapExampleState extends State<WrapExample> {
           maxScale: JLPhotoViewComputedScale.covered * 2.0,
           minScale: JLPhotoViewComputedScale.contained * 0.8,
           initialScale: JLPhotoViewComputedScale.covered,
+          enablePanAlways: true,
+          enableRotation: true,
         ),
       ),
     );

@@ -7,11 +7,21 @@ import 'package:jiji_modelcard_maker/common/constants.dart';
 import 'package:jiji_modelcard_maker/common/jijimodel_theme_data.dart';
 import 'package:multi_image_picker_view/multi_image_picker_view.dart';
 import 'package:jiji_modelcard_maker/custom_examples.dart';
+import 'package:provider/provider.dart';
+import 'package:jiji_modelcard_maker/common/jijimodel_photo_view_model.dart';
 
 void main() {
-  runApp(const JiJiModelApp());
+  runApp(
+    /// Providers are above [MyApp] instead of inside it, so that tests
+    /// can use [MyApp] while mocking the providers
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => JiJiModelPhotoViewModel()),
+      ],
+      child:const JiJiModelApp(),
+    ),
+  );
 }
-
 class JiJiModelApp extends StatelessWidget {
   const JiJiModelApp({
     super.key,
