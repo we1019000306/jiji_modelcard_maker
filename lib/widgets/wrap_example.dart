@@ -18,7 +18,7 @@ class _WrapExampleState extends State<WrapExample> {
     super.initState();
     _tiles = <Widget>[
       containerWithPictureNum('1'),
-      // containerWithPictureNum('2'),
+      containerWithPictureNum('2'),
       // containerWithPictureNum('3'),
       // containerWithPictureNum('4'),
       // containerWithPictureNum('1'),

@@ -5,6 +5,8 @@ import 'package:jiji_modelcard_maker/common/global.dart';
 import 'package:multi_image_picker_view/multi_image_picker_view.dart';
 import 'package:jiji_modelcard_maker/widgets/photoview_move.dart';
 import 'wrap_example.dart';
+import 'package:provider/provider.dart';
+import 'package:jiji_modelcard_maker/common/jijimodel_photo_view_model.dart';
 
 class Custom1 extends StatefulWidget {
   Custom1({Key? key}) : super(key: key);
@@ -96,6 +98,7 @@ class _Custom1State extends State<Custom1> {
           ),
           ElevatedButton(
             onPressed: () {
+              Provider.of<JiJiModelPhotoViewModel>(context, listen: false);
               Navigator.push(
                 context,
                 MaterialPageRoute(

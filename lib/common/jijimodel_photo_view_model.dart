@@ -15,9 +15,7 @@ class JiJiModelPhotoViewModel with ChangeNotifier, DiagnosticableTreeMixin {
     deltaDx = dx;
     deltaDy = dy;
     photoViewScale = scale;
-    if (kDebugMode) {
-     // print(photoViewScale);
-    }
+
     notifyListeners();
   }
 
