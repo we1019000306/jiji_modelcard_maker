@@ -3,20 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:reorderables/reorderables.dart';
 import 'package:jl_photo_view/jl_photo_view.dart';
 import 'package:jiji_modelcard_maker/common/global.dart';
+import 'package:image/image.dart';
 
 class WrapExample extends StatefulWidget {
   @override
   _WrapExampleState createState() => _WrapExampleState();
+  var img1 = AssetImage("assets/1.png");
+  
 }
 
 class _WrapExampleState extends State<WrapExample> {
   final double _iconSize = 90;
   late List<Widget> _tiles;
-
   @override
   void initState() {
     super.initState();
     _tiles = <Widget>[
+
       containerWithPictureNum('1'),
       containerWithPictureNum('2'),
       // containerWithPictureNum('3'),
@@ -36,6 +39,7 @@ class _WrapExampleState extends State<WrapExample> {
       setState(() {
         Widget row = _tiles.removeAt(oldIndex);
         _tiles.insert(newIndex, row);
+
       });
     }
 
