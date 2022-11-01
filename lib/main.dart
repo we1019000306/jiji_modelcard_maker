@@ -5,10 +5,11 @@ import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:jiji_modelcard_maker/common/jijimodel_options.dart';
 import 'package:jiji_modelcard_maker/common/constants.dart';
 import 'package:jiji_modelcard_maker/common/jijimodel_theme_data.dart';
+import 'package:jl_photo_view/jl_photo_view.dart';
 import 'package:multi_image_picker_view/multi_image_picker_view.dart';
 import 'package:jiji_modelcard_maker/custom_examples.dart';
 import 'package:provider/provider.dart';
-import 'package:jiji_modelcard_maker/common/jijimodel_photo_view_model.dart';
+import 'package:jiji_modelcard_maker/common/jijimodel_photo_view_album.dart';
 
 void main() {
   runApp(
@@ -16,7 +17,7 @@ void main() {
     /// can use [MyApp] while mocking the providers
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => JiJiModelPhotoViewModel()),
+        ChangeNotifierProvider(create: (_) => JiJiModelPhotoViewAlbum())
       ],
       child:const JiJiModelApp(),
     ),

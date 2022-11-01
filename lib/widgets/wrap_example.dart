@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:reorderables/reorderables.dart';
 import 'package:jl_photo_view/jl_photo_view.dart';
 import 'package:jiji_modelcard_maker/common/global.dart';
+import 'package:jiji_modelcard_maker/common/jijimodel_photo_view_album.dart';
+import 'package:jiji_modelcard_maker/common/jijimodel_photo_view_item.dart';
+import 'package:provider/provider.dart';
 import 'package:image/image.dart';
 
 class WrapExample extends StatefulWidget {
@@ -22,7 +25,7 @@ class _WrapExampleState extends State<WrapExample> {
 
       containerWithPictureNum('1'),
       containerWithPictureNum('2'),
-      // containerWithPictureNum('3'),
+      containerWithPictureNum('3'),
       // containerWithPictureNum('4'),
       // containerWithPictureNum('1'),
       // containerWithPictureNum('2'),
@@ -31,6 +34,7 @@ class _WrapExampleState extends State<WrapExample> {
       // containerWithPictureNum('1'),
 
     ];
+
   }
 
   @override
