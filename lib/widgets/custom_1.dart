@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:jiji_modelcard_maker/common/global.dart';
 import 'package:multi_image_picker_view/multi_image_picker_view.dart';
 import 'package:jiji_modelcard_maker/widgets/normal_nine_photoview_album.dart';
+import 'package:jiji_modelcard_maker/widgets/normal_nine_photoview_album_test.dart';
 import 'package:jiji_modelcard_maker/widgets/photoview_move.dart';
 import 'wrap_example.dart';
 import 'package:provider/provider.dart';
@@ -104,7 +105,7 @@ class _Custom1State extends State<Custom1> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return NormalNinePhotoViewAlbum(
+                    return DragDemoPage(
                       //imgPathList: imgPathList,
                     );
                   },
